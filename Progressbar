@@ -1,0 +1,37 @@
+from tkinter import *
+from tkinter import ttk
+
+root = Tk()
+root.title('Progressbar')
+root.geometry("600x400")
+
+def step():
+    B.config(text = widget1['value'] + 10) # (+ 10) will set at correct starting point when button is pressed.
+    widget1['value'] += 10
+    if widget1['value'] == 100:
+        print('done')
+
+
+# main
+
+# progressbar1
+widget1 = ttk.Progressbar(root, orient=HORIZONTAL, length=300, mode='determinate')
+widget1.pack(pady=20)
+
+my_button1 = Button(root, text="Progress", command=step)
+my_button1.pack(pady=20)
+
+B = Label(root, text='')
+B.pack()
+
+# progressbar2
+widget2 = ttk.Progressbar(root, orient='horizontal', mode='indeterminate', length=280)
+widget2.pack()
+
+my_button2 = Button(root, text='Start', command = widget2.start)
+my_button2.pack()
+
+my_button3 = Button(root, text='Stop', command = widget2.stop)
+my_button3.pack()
+
+root.mainloop()
