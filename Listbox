@@ -1,0 +1,11 @@
+from tkinter import *
+root = Tk()
+A = Listbox()
+A.insert(1, "1")
+A.insert(2, "2")
+A.insert(3, "3")
+A.insert(4, "4")
+A.insert(5, "5")
+A.insert(6, "6")
+A.pack()
+root.mainloop()
