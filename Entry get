@@ -17,5 +17,5 @@ root.mainloop()
 """
 Footnotes*
 
-Entry value from widget will always be a string no matter what.
+Entry value from widget will be a string.
 """
