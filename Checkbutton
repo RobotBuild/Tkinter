@@ -1,0 +1,6 @@
+from tkinter import *
+
+root = Tk()
+A = Checkbutton()
+A.pack()
+root.mainloop()
