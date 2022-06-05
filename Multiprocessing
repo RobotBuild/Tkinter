@@ -1,0 +1,39 @@
+"""
+Multiprocessing with Tkinter. Does not work on windows, windows doesn't support forking.
+"""
+from tkinter import *
+from multiprocessing import *
+    
+queue = Queue()
+
+def window1():
+    root = Tk()
+    root.title ("Window 1")
+    A = Entry()
+    A.pack()
+    def pressed():
+        queue.put(A.get())
+        B = Label(text="Is sent")
+        B.pack()
+    C = Button(text="Send", command=pressed)
+    C.pack()
+    root.mainloop()
+
+def window2():
+    root = Tk()
+    root.title ("Window 2")
+    def pressed():
+        B = Label(text=queue.get())
+        B.pack()
+    C = Button(text="Get", command=pressed)
+    C.pack()
+    root.mainloop()
+
+
+if __name__ == "__main__":
+    
+    p1 = Process(target = window1)
+    p2 = Process(target = window2)
+    
+    p1.start()
+    p2.start()
