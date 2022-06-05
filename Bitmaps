@@ -1,0 +1,10 @@
+from tkinter import *
+
+root = Tk()
+
+A = Button(root, relief=RAISED, bitmap="error")
+
+A.pack()
+root.mainloop()
+
+# Bitmaps = error, hourglass, info, question, warning
