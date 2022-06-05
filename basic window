@@ -1,0 +1,7 @@
+"""
+Basic Tkinter window
+"""
+
+from tkinter import *
+root = Tk()
+root.mainloop()
