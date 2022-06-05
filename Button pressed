@@ -1,0 +1,13 @@
+from tkinter import *
+
+def pressed():
+    B = Label(text="Was pressed")
+    B.pack()
+
+# Main
+root = Tk()
+
+A = Button(text="press Me", command=pressed)
+A.pack()
+
+root.mainloop()
