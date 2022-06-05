@@ -1,0 +1,21 @@
+from tkinter import *
+
+def pressed():
+    C = Label(text = A.get())
+    C.pack()
+
+root = Tk()
+
+A = Entry()
+A.pack()
+
+B = Button(text="press", command=pressed)
+B.pack()
+ 
+root.mainloop()
+
+"""
+Footnotes*
+
+Entry value from widget will always be a string no matter what.
+"""
