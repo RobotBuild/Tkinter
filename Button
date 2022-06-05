@@ -1,0 +1,9 @@
+"""
+Create a blank button
+"""
+
+from tkinter import *
+root = Tk()
+A = Button()
+A.pack()
+root.mainloop()
