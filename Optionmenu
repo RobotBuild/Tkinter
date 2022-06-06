@@ -1,0 +1,13 @@
+from tkinter import *
+
+list = ["1", "2", "3"]
+
+root = Tk()
+
+variable = StringVar()
+variable.set(list[0])
+
+opt = OptionMenu(root, variable, *list)
+opt.pack()
+
+root.mainloop()
