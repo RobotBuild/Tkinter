@@ -1,0 +1,14 @@
+from tkinter import *
+
+root = Tk()
+
+my_canvas = Canvas(root, width=300, height=300, bg="white")
+my_canvas.pack()
+
+# Line properties (x1 (start), y1 (start), x2 (stop), y2 (stop), fill="color")
+# The x and y axis is just like a normal graph. One is just where it starts and two is where the line stops.
+# Think of it like select point A, now select point B, then it draws a line from A to B.
+# Also, the canvas graph is upside down, not (|__) x,y rightside up normal. So y-300 goes down and y-0 goes up.
+my_canvas.create_line(50, 200, 200, 50, fill="red")
+
+root.mainloop()
